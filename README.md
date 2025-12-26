@@ -9,7 +9,7 @@ El objetivo del proyecto es ofrecer una página rápida, clara y visual para mos
 - HTML5
 - CSS3
 - JavaScript
-- Remix Icon (CDN)
+- [Remix Icon (CDN)](https://remixicon.com/)
 
 ## 🛠️ Instalación y uso
 
