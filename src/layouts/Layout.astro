@@ -1,5 +1,6 @@
 ---
 import Global from "@components/global.astro";
+import Navbar from "@components/structure/Navbar.astro";
 import Footer from "@components/structure/Footer.astro";
 
 const { title, description = "Cocina económica Las Haciendas" } = Astro.props;
@@ -15,10 +16,15 @@ const siteName = "Las Haciendas";
     <Global />
   </head>
 
-  <body>
+  <body class="">
+    <header>
+      <Navbar />
+    </header>
     <main>
       <slot />
     </main>
     <Footer />
+
+    <script src="/src/scripts/script.js" type="module" defer></script>
   </body>
 </html>
