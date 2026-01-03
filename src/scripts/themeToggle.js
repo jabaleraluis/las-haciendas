@@ -1,26 +1,29 @@
-export default function themeToggle(toggle, icons) {
-  const $toggle = document.querySelector(toggle);
-  const $icons = document.querySelectorAll(icons);
+export default function themeToggle(toggle) {
+  const $toggle = document.querySelectorAll(toggle);
 
-  function setTheme(theme) {
+  function applyTheme(theme) {
     if (!["light", "dark"].includes(theme)) return;
 
     document.documentElement.classList.toggle("dark", theme === "dark");
-
-    $toggle.dataset.theme = theme;
-
-    $icons.forEach((icon) => {
-      icon.classList.toggle("active", icon.dataset.theme === theme);
-    });
-
     localStorage.setItem("theme", theme);
+
+    $toggle.forEach((toggle) => {
+      toggle.dataset.theme = theme;
+
+      toggle.querySelectorAll("[data-theme]").forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.theme === theme);
+      });
+    });
   }
 
-  setTheme(localStorage.getItem("theme") || "light");
+  applyTheme(localStorage.getItem("theme") || "light");
 
-  $icons.forEach((icon) => {
-    icon.addEventListener("click", () => {
-      setTheme(icon.dataset.theme);
+  $toggle.forEach((toggle) => {
+    toggle.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-theme]");
+      if (!btn) return;
+
+      applyTheme(btn.dataset.theme);
     });
   });
 }

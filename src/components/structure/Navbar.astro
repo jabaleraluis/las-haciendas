@@ -5,18 +5,16 @@ import ThemeToggle from "./ThemeToggle.astro";
 <nav class="navbar">
   <a href="/" class="logo__icon"><i class="ri-restaurant-2-fill"></i></a>
 
-  <div class="navbar__togle-btn">
-    <div class="toggle-bar"></div>
-    <div class="toggle-bar"></div>
-    <div class="toggle-bar"></div>
-  </div>
-
   <ul class="navbar__links">
-    <li class="link"><a href="#home">Inicio</a></li>
+    <li class="link active"><a href="#home">Inicio</a></li>
     <li class="link"><a href="#menu">Menú</a></li>
     <li class="link"><a href="#about">Acerca</a></li>
     <li class="link"><a href="#location">Ubicación</a></li>
     <li class="link"><a href="#contact">Contacto</a></li>
+    <div class="links__separator"></div>
+    <li class="link deskHidden">
+      <ThemeToggle />
+    </li>
   </ul>
 
   <div class="navbar__tools">
@@ -24,6 +22,15 @@ import ThemeToggle from "./ThemeToggle.astro";
       <i class="ri-shopping-bag-fill"></i>
       <span class="badge">5</span>
     </a>
-    <ThemeToggle />
+    <div class="mobileHidden">
+      <ThemeToggle />
+    </div>
+    <div class="deskHidden">
+      <div class="navbar__togle-btn">
+        <div class="toggle-bar"></div>
+        <div class="toggle-bar"></div>
+        <div class="toggle-bar"></div>
+      </div>
+    </div>
   </div>
 </nav>
