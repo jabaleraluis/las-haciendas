@@ -5,7 +5,7 @@ import ThemeToggle from "./ThemeToggle.astro";
 <nav class="navbar">
   <a href="/" class="logo__icon"><i class="ri-restaurant-2-fill"></i></a>
 
-  <ul class="navbar__links">
+  <ul class="navbar__links" id="navbar-links">
     <li class="link active"><a href="#home">Inicio</a></li>
     <li class="link"><a href="#menu">Menú</a></li>
     <li class="link"><a href="#about">Acerca</a></li>
@@ -26,11 +26,11 @@ import ThemeToggle from "./ThemeToggle.astro";
       <ThemeToggle />
     </div>
     <div class="deskHidden">
-      <div class="navbar__togle-btn">
+      <button class="navbar__togle-btn" aria-expanded="false" aria-controls="navbar-links" aria-label="Open menu">
         <div class="toggle-bar"></div>
         <div class="toggle-bar"></div>
         <div class="toggle-bar"></div>
-      </div>
+      </button>
     </div>
   </div>
 </nav>
