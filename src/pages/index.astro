@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <section class="hero__section">
+  <section class="hero__section" id="home">
     <div class="hero__content">
       <div class="title__wrapper">
         <h1>Las Haciendas</h1>
@@ -21,10 +21,34 @@ import Layout from "../layouts/Layout.astro";
     </div>
 
     <div class="hero__img">
-      <img src="/src/assets/images/hero.png" alt="Platillos caseros de Cocina Las Haciendas" />
+      <img src="/src/assets/images/index/hero/hero.png" alt="Platillos caseros de Cocina Las Haciendas" />
       <svg viewBox="-80 -80 170 160" xmlns="http://www.w3.org/2000/svg">
         <path d="M42.3,-73.1C52,-67.7,54.9,-50.6,62.2,-36.4C69.6,-22.3,81.2,-11.1,85.3,2.3C89.3,15.8,85.7,31.6,76.2,42C66.8,52.4,51.4,57.4,37.7,63C24,68.5,12,74.6,1.3,72.4C-9.5,70.2,-19,59.8,-31,53.3C-43.1,46.8,-57.7,44.3,-66.7,36.1C-75.6,27.9,-78.8,13.9,-77.9,0.5C-77,-12.9,-72.1,-25.8,-65.9,-38.8C-59.8,-51.8,-52.4,-64.9,-41.2,-69.5C-30,-74,-15,-70,0.7,-71.1C16.3,-72.2,32.7,-78.5,42.3,-73.1Z"></path>
       </svg>
+    </div>
+  </section>
+
+  <section class="services__section" id="services">
+    <div class="section-title">
+      <h2>Nuestros Servicios</h2>
+      <h1>¿Qué Ofrecemos?</h1>
+    </div>
+    <div class="services__wrapper">
+      <div class="service">
+        <img src="src/assets/images/index/services/dinner.png" alt="" />
+        <h1>Comida Casera</h1>
+        <p>Comida recién hecha con el sazón del hogar.</p>
+      </div>
+      <div class="service">
+        <img src="src/assets/images/index/services/clock.png" alt="" />
+        <h1>Servicio Rápido</h1>
+        <p>Rápido y práctico, para que no pierdas tiempo.</p>
+      </div>
+      <div class="service">
+        <img src="src/assets/images/index/services/piggy-bank.png" alt="" />
+        <h1>Precios justos</h1>
+        <p>Comer bien y delicioso, no tiene que ser caro.</p>
+      </div>
     </div>
   </section>
 </Layout>
