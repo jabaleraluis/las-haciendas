@@ -1,0 +1,39 @@
+---
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  img: string;
+  tags?: string[];
+}
+
+const { products, limit = null } = Astro.props as {
+  products: Product[];
+  limit?: number | null;
+};
+
+const list = limit ? products.slice(0, limit) : products;
+---
+
+<div class="products__wrapper">
+  {
+    list.map((product) => (
+      <article class="product-card">
+        {product.tags?.includes("daily") && <span class="ribbon">Comida del día</span>}
+        <div class="product-img">
+          <img src={product.img} alt={product.name} />
+        </div>
+        <div class="product-content">
+          <h1>{product.name}</h1>
+          <div class="price">
+            <span>$</span>
+            <p>{product.price}</p>
+          </div>
+        </div>
+        <a class="add-cart" href="#" data-name={product.name}>
+          Agregar al carrito
+        </a>
+      </article>
+    ))
+  }
+</div>

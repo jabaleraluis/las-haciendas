@@ -1,0 +1,58 @@
+export const products = [
+  {
+    id: 1,
+    name: "Hamburguer",
+    price: 90,
+    img: "/src/assets/images/products/burger.png",
+    tags: ["popular"],
+  },
+  {
+    id: 2,
+    name: "Chicken Roll",
+    price: 79,
+    img: "/src/assets/images/products/chicken-roll.png",
+    tags: ["popular"],
+  },
+  {
+    id: 3,
+    name: "Fried Chicken",
+    price: 110,
+    img: "/src/assets/images/products/fried-chicken.png",
+    tags: [],
+  },
+  {
+    id: 4,
+    name: "Lasagna",
+    price: 50,
+    img: "/src/assets/images/products/lasagna.png",
+    tags: ["popular"],
+  },
+  {
+    id: 5,
+    name: "Pizza",
+    price: 95,
+    img: "/src/assets/images/products/pizza.png",
+    tags: [],
+  },
+  {
+    id: 6,
+    name: "Sandwich",
+    price: 20,
+    img: "/src/assets/images/products/sandwich.png",
+    tags: [],
+  },
+  {
+    id: 7,
+    name: "Spaghetti",
+    price: 30,
+    img: "/src/assets/images/products/spaghetti.png",
+    tags: ["popular", "daily"],
+  },
+  {
+    id: 8,
+    name: "Spring Roll",
+    price: 80,
+    img: "/src/assets/images/products/spring-roll.png",
+    tags: [],
+  },
+];

@@ -1,5 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { products } from "src/scripts/products";
+import Products from "@components/structure/Products.astro";
+
+const popularProducts = products.filter((p) => p.tags?.includes("popular"));
 ---
 
 <Layout>
@@ -49,6 +53,19 @@ import Layout from "../layouts/Layout.astro";
         <h1>Precios justos</h1>
         <p>Comer bien y delicioso, no tiene que ser caro.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- <hr style="width: 25%; margin: 0 auto"> -->
+
+  <section class="products__section" id="menu">
+    <div class="section-title">
+      <h2>Nuestro Menú</h2>
+      <h1>Más Populares</h1>
+    </div>
+    <Products products={popularProducts} limit={4} />
+    <div class="see-all-btn">
+      <a class="see-all" href="/menu">Ver todos <i class="ri-arrow-right-s-line"></i></a>
     </div>
   </section>
 </Layout>

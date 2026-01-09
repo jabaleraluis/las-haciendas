@@ -1,0 +1,21 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Products from "@components/structure/Products.astro";
+import { products } from "src/scripts/products";
+
+const sortedProducts = [...products].sort((a, b) => {
+  const aDaily = a.tags?.includes("daily") ? 1 : 0;
+  const bDaily = b.tags?.includes("daily") ? 1 : 0;
+
+  return bDaily - aDaily;
+});
+---
+
+<Layout>
+  <section class="products__section">
+    <div class="section-title">
+      <h1>Nuestro Menú</h1>
+    </div>
+    <Products products={sortedProducts} />
+  </section>
+</Layout>
