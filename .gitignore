@@ -24,6 +24,6 @@ pnpm-debug.log*
 .idea/
 
 # Others
-.vscode/
+.*
 TODO  
 Media-queries.css

@@ -61,11 +61,68 @@ const popularProducts = products.filter((p) => p.tags?.includes("popular"));
   <section class="products__section" id="menu">
     <div class="section-title">
       <h2>Nuestro Menú</h2>
-      <h1>Más Populares</h1>
+      <h1>¡Oferta Del Día!</h1>
     </div>
-    <Products products={popularProducts} limit={4} />
+    <div class="plate__hero product-content">
+      <div class="promotion-badge"><i class="ri-sparkling-fill"></i> promoción <i class="ri-sparkling-fill"></i></div>
+      <h1>Platillo Especial</h1>
+      <div class="price">
+        <span>$</span>
+        <p>100</p>
+      </div>
+      <h2>1 Guiso + 2 Guarniciones</h2>
+      <p class="description">¡Elige tu guiso favorito y acompáñalo con dos guarniciones a tu elección!</p>
+    </div>
     <div class="see-all-btn">
-      <a class="see-all" href="/menu">Ver todos <i class="ri-arrow-right-s-line"></i></a>
+      <a class="menu-btn" href="/menu">Ver Menú Completo <i class="ri-arrow-right-s-line"></i></a>
+    </div>
+  </section>
+
+  <section class="location" id="location">
+    <div class="section-title">
+      <h2>Ubicación</h2>
+      <h1>Ven a Visitarnos</h1>
+    </div>
+    <div class="location-wrapper">
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1052.235880457659!2d-109.91005924513182!3d27.49149451791862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86c815d1be1b7167%3A0xade9bcdf63c49d71!2sAv.%20No%20Reeleccion%202408%2C%20Las%20Haciendas%2C%2085064%20Cdad.%20Obreg%C3%B3n%2C%20Son.!5e0!3m2!1ses-419!2smx!4v1768337488060!5m2!1ses-419!2smx" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe>
+      </div>
+      <div class="info-section">
+        <div class="item">
+          <i class="ri-map-pin-2-line"></i>
+          <div class="label">
+            <span>Dirección</span>
+            <p>
+              No. Reelección #2408<br />
+              Ciudad Obregón, Sonora
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <i class="ri-pushpin-line"></i>
+          <div class="label">
+            <span>Referencias</span>
+            <p>
+              Entre privada San Miguel y Bartolomé<br />
+              (Frente a Ley Exprés)
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <i class="ri-map-pin-time-line"></i>
+          <div class="label">
+            <span>Colonia</span>
+            <p>
+              Las Haciendas, 85064 <br />
+              Zona Residencial
+            </p>
+          </div>
+        </div>
+        <div class="btn__wrapper">
+          <a href="https://www.google.com/maps/dir//Av.+No+Reeleccion+2408,+Las+Haciendas,+85064+Cdad.+Obregón,+Son." target="_blank" rel="noopener noreferrer" class="get-there-btn"><i class="ri-navigation-fill"></i> Cómo llegar</a>
+          <a href="wa.me/" target="_blank" rel="noopener noreferrer" class="call-btn"><i class="ri-phone-fill"></i> Llamar</a>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>

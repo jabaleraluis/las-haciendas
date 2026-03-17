@@ -19,6 +19,21 @@ const list = limit ? products.slice(0, limit) : products;
   {
     list.map((product) => (
       <article class="product-card">
+        <div class="product-img">
+          <img src={product.img} alt={product.name} />
+        </div>
+        <div class="product-content">
+          <h1>Platillo</h1>
+          <div class="price">
+            <span>$</span>
+            <p>100</p>
+          </div>
+        </div>
+        <a class="add-cart" href="#" data-name={product.name}>
+          Agregar al carrito
+        </a>
+      </article>
+      <article class="product-card">
         {product.tags?.includes("daily") && <span class="ribbon">Comida del día</span>}
         <div class="product-img">
           <img src={product.img} alt={product.name} />
